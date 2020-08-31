@@ -1,0 +1,173 @@
+.contacts {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../img/workspace.jpg') no-repeat;
+    background-size: 100%;
+}
+
+.contacts .container {
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 2;
+}
+
+.contacts .container .contactInfo {
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: #222222;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contacts .container .contactInfo h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.contacts .container .contactInfo .info {
+    position: relative;
+    margin: 20px 0;
+}
+
+.contacts .container .contactInfo .info li {
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+    align-items: center;
+}
+
+.contacts .container .contactInfo .info li span:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 30px;
+    min-width: 30px;
+}
+
+.contacts .container .contactInfo .info li span:nth-child(2) {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+.contacts .container .contactInfo .info li:hover span:nth-child(1),
+.contacts .container .contactInfo .info li:hover span:nth-child(2) {
+    color: #4a998a;
+}
+
+.contacts .container .contactForm {
+    position: absolute;
+    padding: 70px 50px;
+    background: #fff;
+    border-radius: 5px;
+    margin-left: 150px;
+    padding-left: 250px;
+    width: calc(100% - 150px);
+    height: 100%;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+}
+
+.contacts .container .contactForm h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #4a998a;
+    font-size: 24px;
+    font-weight: 500px;
+}
+
+.contacts .container .contactForm .formBox {
+    position: relative;
+    padding-top: 30px;
+}
+
+.contacts .container .contactForm .formBox .inputBox {
+    position: relative;
+    margin: 0 0 35px 0;
+}
+
+.contacts .container .contactForm .formBox .wrapperForm {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts .container .contactForm .formBox .wrapperForm .inputBox {
+    width: 45%;
+}
+
+/* .contacts .container .contactForm .formBox .inputBox .w50 {
+    width: 47%;
+}
+
+.contacts .container .contactForm .formBox .inputBox .w100 {
+    width: 100%;
+} */
+
+.contacts .container .contactForm .formBox .inputBox input,
+.contacts .container .contactForm .formBox .inputBox textarea {
+    width: 100% !important;
+    padding: 5px 0;
+    resize: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #777;
+    outline: none;
+}
+
+.contacts .container .contactForm .formBox .inputBox textarea {
+    min-height: 120px;
+}
+
+.contacts .container .contactForm .formBox .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #222222;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.contacts .container .contactForm .formBox .inputBox input:focus ~ span,
+.contacts .container .contactForm .formBox .inputBox textarea:focus ~ span,
+.contacts .container .contactForm .formBox .inputBox input:valid ~ span,
+.contacts .container .contactForm .formBox .inputBox textarea:valid ~ span {
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #4a998a;
+}
+
+.contacts .container .contactForm .formBox .inputBox button {
+    position: relative;
+    cursor: pointer;
+    background: #222222;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    max-width: 200px;
+    padding: 12px;
+    transition: 0.3s all;
+}
+
+.contacts .container .contactForm .formBox .inputBox button:hover {
+    background: #4a998a;
+}
