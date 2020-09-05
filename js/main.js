@@ -17,39 +17,38 @@ document.addEventListener('DOMContentLoaded', () => {
         tabsContent = document.querySelectorAll('.portfolio_projects'),
         tabsParent = document.querySelector('.portfolio_main');
 
-	// function hideTabContent() {
+	function hideTabContent() {
         
-    //     tabsContent.forEach(item => {
-    //         item.classList.add('hideTab');
-    //         item.classList.remove('showTab', 'fade');
-    //     });
+        tabsContent.forEach(item => {
+            item.classList.add('hideTab', 'fade');
+            item.classList.remove('showTab');
+        });
 
-    //     tabs.forEach(item => {
-    //         item.classList.remove('tab_active');
-    //     });
-	// }
+        tabs.forEach(item => {
+            item.classList.remove('tab_active');
+        });
+	}
 
-	// function showTabContent(i = 0) {
-    //     tabs[i].classList.add('tab_active');
-    //     tabsContent[i].classList.add('showTab', 'fade');
-    //     tabsContent[i].classList.remove('hideTab');
-    //     console.log(i);
-    // }
+	function showTabContent(i = 0) {
+        tabs[i].classList.add('tab_active');
+        tabsContent[i].classList.add('showTab');
+        tabsContent[i].classList.remove('hideTab', 'fade');
+    }
     
-    // hideTabContent();
-    // showTabContent();
+    hideTabContent();
+    showTabContent();
 
-	// tabsParent.addEventListener('click', function(event) {
-	// 	const target = event.target;
-	// 	if(target && target.classList.contains('portfolio_projects-tab')) {
-    //         tabs.forEach((item, i) => {
-    //             if (target == item) {
-    //                 hideTabContent();
-    //                 showTabContent(i);
-    //             }
-    //         });
-	// 	}
-    // });
+	tabsParent.addEventListener('click', function(event) {
+		const target = event.target;
+		if(target && target.classList.contains('portfolio_projects-tab')) {
+            tabs.forEach((item, i) => {
+                if (target == item) {
+                    hideTabContent();
+                    showTabContent(i);
+                }
+            });
+		}
+    });
     
     // modal window
 
