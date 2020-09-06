@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // tabs
 
-    let tabs = document.querySelectorAll('.portfolio_projects-tab'),
-        tabsContent = document.querySelectorAll('.portfolio_projects'),
-        tabsParent = document.querySelector('.portfolio_main');
+    let tabs = document.querySelectorAll('.skills_tab'),
+        tabsContent = document.querySelectorAll('.skills_blocks'),
+        tabsParent = document.querySelector('.skills_tab-wrapper');
 
 	function hideTabContent() {
         
@@ -25,12 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         tabs.forEach(item => {
-            item.classList.remove('tab_active');
+            item.classList.remove('skills_active');
         });
 	}
 
 	function showTabContent(i = 0) {
-        tabs[i].classList.add('tab_active');
+        tabs[i].classList.add('skills_active');
         tabsContent[i].classList.add('showTab');
         tabsContent[i].classList.remove('hideTab', 'fade');
     }
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	tabsParent.addEventListener('click', function(event) {
 		const target = event.target;
-		if(target && target.classList.contains('portfolio_projects-tab')) {
+		if(target && target.classList.contains('skills_tab')) {
             tabs.forEach((item, i) => {
                 if (target == item) {
                     hideTabContent();
@@ -48,6 +48,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 		}
+    });
+
+    // slider 
+
+    const slider = tns({
+        container: '.portfolio_main',
+        items: 1,
+        slideBy: 'page',
+        autoplay: false,
+        controls: false
+    });
+    
+    document.querySelector('.prev').addEventListener('click', function() {
+        slider.goTo('prev');
+    });
+    
+    document.querySelector('.next').addEventListener('click', function() {
+        slider.goTo('next');
     });
     
     // modal window

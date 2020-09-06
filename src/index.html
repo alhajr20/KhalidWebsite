@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khalid</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1f61384d26.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
     <header>
@@ -67,8 +69,57 @@
                    </div>
                </div>
            </div>
+           <h4 class="skills_title">SKILLS</h4>
            <div class="row">
-               
+                <div class="skills_tab-wrapper">
+                    <div class="skills_tab skills_active">Frontend</div>
+                    <div class="skills_tab">Backend</div>
+                    <div class="skills_tab">Web design</div>
+                </div>
+           </div>
+           <div class="row">
+                <div class="skills_blocks">
+                    <div class="skills_block">
+                        <i class="fab fa-html5"></i>
+                        <h5>HTML</h5>
+                    </div>
+                    <div class="skills_block">
+                        <i class="fab fa-css3-alt"></i>
+                        <h5>CSS</h5>
+                    </div>
+                    <div class="skills_block">
+                        <i class="fab fa-bootstrap"></i>
+                        <h5>Bootstrap</h5>
+                    </div>
+                    <div class="skills_block">
+                        <i class="fab fa-js"></i>
+                        <h5>JavaScript</h5>
+                    </div>
+                    <div class="skills_block">
+                        <i class="fab fa-react"></i>
+                        <h5>React</h5>
+                    </div>
+                </div>
+                <div class="skills_blocks">
+                    <div class="skills_block">
+                        <i class="fab fa-php"></i>
+                        <h5>PHP</h5>
+                    </div>
+                    <div class="skills_block">
+                        <i class="fab fa-laravel"></i>
+                        <h5>Laravel</h5>
+                    </div>
+                    <div class="skills_block">
+                        <i class="fas fa-database"></i>
+                        <h5>MySQL</h5>
+                    </div>
+                </div>
+                <div class="skills_blocks">
+                    <div class="skills_block">
+                        <i class="fab fa-figma"></i>
+                        <h5>Figma</h5>
+                    </div>
+                </div>
            </div>
            <button class="aboutMe_btn">VIEW MY RESUME</button>
            <hr>
@@ -115,15 +166,17 @@
                     <div class="portfolio_projects-img">
                         <img src="img/tribute-teaser.png" alt="tabs-img">
                     </div>
-                    <h5>TWENTY ONE PILOTS</h5>
-                    <p>
-                        Descr Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam magni adipisci quibusdam ut neque suscipit quos nemo provident ipsa? Odit ducimus voluptatem placeat, quis reiciendis iusto quo dolore. Vitae, corporis.
-                    </p>
-                    <a href="#" class="btn">VIEW LIFE</a>
+                    <div class="portfolio_projects-info">
+                        <h5>TWENTY ONE PILOTS</h5>
+                        <p>
+                            Descr Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam magni adipisci quibusdam ut neque suscipit quos nemo provident ipsa? Odit ducimus voluptatem placeat, quis reiciendis iusto quo dolore. Vitae, corporis.
+                        </p>
+                        <a href="#" class="btn">VIEW LIFE</a>
+                    </div>
                 </div>
                 <div class="portfolio_projects">
                     <div class="portfolio_projects-img">
-                        <img src="img/tribute-teaser.png" alt="tabs-img">
+                        <!-- <img src="img/tribute-teaser.png" alt="tabs-img"> -->
                     </div>
                     <h5>AKRAPOVIC</h5>
                     <p>
@@ -133,7 +186,7 @@
                 </div>
                 <div class="portfolio_projects">
                     <div class="portfolio_projects-img">
-                        <img src="img/tribute-teaser.png" alt="tabs-img">
+                        <!-- <img src="img/tribute-teaser.png" alt="tabs-img"> -->
                     </div>
                     <h5>SOME PROJECT</h5>
                     <p>
@@ -143,19 +196,13 @@
                 </div>
                 <div class="portfolio_projects">
                     <div class="portfolio_projects-img">
-                        <img src="img/tribute-teaser.png" alt="tabs-img">
+                        <!-- <img src="img/tribute-teaser.png" alt="tabs-img"> -->
                     </div>
                     <h5>UBER</h5>
                     <p>
                         Descr Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam magni adipisci quibusdam ut neque suscipit quos nemo provident ipsa? Odit ducimus voluptatem placeat, quis reiciendis iusto quo dolore. Vitae, corporis.
                     </p>
                     <a href="#" class="btn">VIEW LIFE</a>
-                </div>
-                <div class="portfolio_projects-tabs">
-                    <div class="portfolio_projects-tab tab_active">First</div>
-                    <div class="portfolio_projects-tab">Second</div>
-                    <div class="portfolio_projects-tab">Third</div>
-                    <div class="portfolio_projects-tab">Fourth</div>
                 </div>
             </div>
         </div>
@@ -264,9 +311,10 @@
         </div>
     </div>
 
-    <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

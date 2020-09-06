@@ -1,0 +1,22 @@
+{
+  "name": "khalidwebsite",
+  "version": "1.0.0",
+  "description": "This is my website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alhajr20/KhalidWebsite.git"
+  },
+  "author": "Khalid Beriev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alhajr20/KhalidWebsite/issues"
+  },
+  "homepage": "https://github.com/alhajr20/KhalidWebsite#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0"
+  }
+}
