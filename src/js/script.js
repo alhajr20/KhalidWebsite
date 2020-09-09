@@ -1,3 +1,5 @@
+"use strict";
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // mobile menu
@@ -49,24 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 		}
     });
-
-    // slider 
-
-    const slider = tns({
-        container: '.portfolio_main',
-        items: 1,
-        slideBy: 'page',
-        autoplay: false,
-        controls: false
-    });
-    
-    document.querySelector('.prev').addEventListener('click', function() {
-        slider.goTo('prev');
-    });
-    
-    document.querySelector('.next').addEventListener('click', function() {
-        slider.goTo('next');
-    });
     
     // modal window
 
@@ -103,5 +87,46 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.code === 'Escape' && modal.classList.contains('show')) {
             closeModal();
         }
+    });
+
+    // slider
+    
+    const slides = document.querySelectorAll('.portfolio_projects'),
+          prev = document.querySelector('.portfolio_prev'),
+          next = document.querySelector('.portfolio_next'),
+          slidesWrapper = document.querySelector('.portfolio_main'),
+          slidesField = document.querySelector('.portfolio_inner'),
+          width = window.getComputedStyle(slidesWrapper).width;
+
+    let offset = 0;
+
+    slidesField.style.width = 100 * slides.length + '%';
+    slidesField.style.display = 'flex';
+    slidesField.style.transition = '0.5s all';
+
+    slidesWrapper.style.overflow = 'hidden';
+
+    slides.forEach(slide => {
+        slide.style.width = width;
+    });
+
+    next.addEventListener('click', function() {
+        if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
+            offset = 0;
+        } else {
+            offset += +width.slice(0, width.length - 2)
+        }
+
+        slidesField.style.transform = `translateX(-${offset}px)`;
+    });
+
+    prev.addEventListener('click', function() {
+        if (offset == 0) {
+            offset = +width.slice(0, width.length - 2) * (slides.length - 1)
+        } else {
+            offset -= +width.slice(0, width.length - 2)
+        }
+
+        slidesField.style.transform = `translateX(-${offset}px)`;
     });
 });
