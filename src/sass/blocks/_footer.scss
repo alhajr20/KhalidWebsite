@@ -1,0 +1,13 @@
+.footer {
+    background: url('../img/bg-3.jpg') fixed no-repeat center;
+    background-size: 100%;
+    padding: 50px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &__title {
+        color: $green;
+        font-weight: 900;
+    }
+}

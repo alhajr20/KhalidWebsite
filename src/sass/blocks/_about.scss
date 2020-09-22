@@ -1,0 +1,125 @@
+.about {
+    padding: 50px 0;
+    transition: 0.5s all;
+    &__avatar {
+        border: 5px solid $green;
+        border-radius: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+        }
+    }
+    &__descr {
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            color: #808080;
+        }
+    }
+    &__button {
+        display: block;
+        margin: 0 auto;
+        outline: none;
+        padding: 10px 30px;
+        border: 1px solid $green;
+        border-radius: 5px;
+        background-color: #fff;
+        color: $green;
+        transition: 0.3s all;
+        margin-top: 100px;
+        &:hover {
+            color: #fff;
+            background-color: $green;
+        }
+    }
+    .skills__tabs {
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        margin-top: 20px;
+        .skills__tab {
+            color: $green;
+            border: 1px solid $green;
+            border-radius: 3px;
+            padding: 5px 20px;
+            cursor: pointer;
+            &_active {
+                background-color: $green;
+                color: #fff;
+            }
+        }
+    }
+    .skills__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 80px;
+        .skills__block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h5 {
+                margin-top: 15px;
+                color: $green;
+            }
+            i {
+                font-size: 70px;
+            }
+        }
+        .skills__block:nth-child(1) {
+            i {
+                color: #e44618;
+            }
+        }
+        .skills__block:nth-child(2) {
+            i {
+                color: #1673b6;
+            }
+        }
+        .skills__block:nth-child(3) {
+            i {
+                color: #6c41a3;
+            }
+        }
+        .skills__block:nth-child(4) {
+            i {
+                color: #efd81d;
+            }
+        }
+        .skills__block:nth-child(5) {
+            i {
+                color: #61dbfb;
+            }
+        }
+    }
+    .skills__wrapper:nth-child(2) {
+        .skills__block:nth-child(1) {
+            i {
+                color: #777bb3;
+            }
+        }
+        .skills__block:nth-child(2) {
+            i {
+                color: #f72b1e;
+            }
+        }
+        .skills__block:nth-child(3) {
+            i {
+                color: #ea8c10;
+            }
+        }
+    }
+    .skills__wrapper:nth-child(3) {
+        justify-content: center;
+    }
+    
+    .showTab {
+        display: flex;
+    }
+    
+    .hideTab {
+        display: none;
+    }
+}

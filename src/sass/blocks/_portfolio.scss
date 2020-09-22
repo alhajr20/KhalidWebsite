@@ -1,0 +1,63 @@
+.portfolio {
+    position: relative;
+    padding: 50px 0 100px 0;
+    background: linear-gradient($black, $green);
+    &__wrapper {
+        width:100%;
+        margin-top:15px;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 390px;
+        margin-top: 30px;
+    }
+    &__img {
+        width: 50%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__info {
+        width: 40%;
+        .info {
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            p {
+                font-size: 14px;
+                text-align: center;
+                margin-top: 5px;
+            }
+            a {
+                width: 130px;
+                display: block;
+                margin: 0 auto;
+                border: 1px solid $green;
+                border-radius: 5px;
+                background-color: #fff;
+                color: $green;
+                transition: 0.3s all;
+                &:hover {
+                    background-color: $green;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &__prev,&__next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 150px;
+        border: none;
+        background-color: rgba(0,0,0, 0);
+        color: $black;
+        font-size: 66px;
+    }
+    &__next {
+        right: 150px;
+        left: auto;
+    }
+}
