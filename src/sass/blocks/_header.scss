@@ -48,16 +48,17 @@
         display: none;
     }
     &__info {
-        background: url('../img/bg-1.jpg') fixed no-repeat;
+        background: url('../img/bg-5.jpg') fixed no-repeat;
         background-size: 100% 100%;
         background-position: center;
         padding: 200px 0 0 0;
         min-height: 700px;
+        width: 100%;
         h1, h2 {
             text-align: center;
             margin-bottom: 20px;
             font-size: 46px;
-            color: $green;
+            color: #ffffff;
             font-weight: bold;
         }
         a {
@@ -65,15 +66,15 @@
             display: block;
             margin: 0 auto;
             outline: none;
-            color: $green;
-            border: 3px solid $green;
+            color: #ffffff;
+            border: 1px solid #ffffff;
             transition: 0.5s all;
             margin-top: 50px;
             font-weight: 700;
             &:hover {
-                background-color: $green;
-                color: #ffffff;
-                border: 3px solid $green;
+                background-color: #ffffff;
+                color: $green;
+                border: 3px solid #ffffff;
             }
         }
     }

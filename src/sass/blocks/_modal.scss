@@ -9,9 +9,11 @@
     background-color: rgba(0, 0, 0, .5);
     transition: 0.5s all;
     &__modal {
-        max-width: 1000px;
-        margin: 200px auto;
-        transition: 0.5s all;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 350px;
     }
     &__content {
         position: relative;
@@ -43,6 +45,10 @@
         h2 {
             text-align: center;
         }
+    }
+    &__close-wrapper {
+        display: flex;
+        justify-content: flex-end;
         button {
             float: right;
             width: 5%;
@@ -50,11 +56,13 @@
             background-color: #fff;
             border: none;
             outline: none;
+            color: $green;
             span {
                 width: 100%;
-                font-size: 30px;
+                font-size: 40px;
+                transition: 0.5s all;
                 &:hover {
-                    color: grey;
+                    color: red;
                 }
             }
         }

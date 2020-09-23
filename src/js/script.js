@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
     dots.style.cssText = `
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: 5%;
         left: 0;
         z-index: 15;
         display: flex;
@@ -325,83 +325,83 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Form
 
-    $('#form').validate({
-        rules: {
-            name: {
-                required: true
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            subject: {
-                required: true,
-                minlength: 7
-            },
-            message: {
-                required: true,
-                minlength: 15
-            }
-        },
-        messages: {
-            name: {
-                required: "Пожалуйста, заполните поле \"Name\""
-            },
-            email: {
-                required: "Пожалуйста, заполните поле \"Email\"",
-                email: "Пожалуйста, введите корректный email адрес"
-            },
-            subject: {
-                required: "Пожалуйста, заполните поле \"Subject\"",
-                minlength: jQuery.format('Длина темы должно быть не менее {0}-х символов')
-            },
-            message: {
-                required: "Пожалуйста, заполните поле \"Message\"",
-                minlength: jQuery.format('Длина сообщения должно быть не менее {0}-х символов')
-            }
-        },
-        submitHandler: function() {
-            bindPostData(form);
-        }
-    });
+    // const form = document.querySelector('form');
 
-    const form = document.querySelector('form');
+    // const message = {
+    //     loading: 'Загрузка...',
+    //     success: 'Спасибо! Ждите ответа',
+    //     failure: 'Что-то пошло не так...'
+    // };
 
-    const message = {
-        loading: 'Загрузка...',
-        success: 'Спасибо! Ждите ответа',
-        failure: 'Что-то пошло не так...'
-    };
-
-    const postData = async (url, data) => {
-        let res = await fetch(url, {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: data
-        });
+    // const postData = async (url, data) => {
+    //     let res = await fetch(url, {
+    //         method: "POST",
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: data
+    //     });
     
-        return await res.json();
-    };
+    //     return await res.json();
+    // };
 
-    function bindPostData(form) {
-        const formData = new FormData(form);
+    // function bindPostData(form) {
+    //     const formData = new FormData(form);
 
-        const json = JSON.stringify(Object.fromEntries(formData.entries()));
+    //     const json = JSON.stringify(Object.fromEntries(formData.entries()));
 
-        postData('http://localhost:3000/requests', json)
-            .then(data => {
-                showThanksModal(message.success);
-            }).catch(() => {
-                showThanksModal(message.failure);
-            }).finally(() => {
-                form.reset();
-            });
-    }
+    //     postData('http://localhost:3000/requests', json)
+    //         .then(data => {
+    //             showThanksModal(message.success);
+    //         }).catch(() => {
+    //             showThanksModal(message.failure);
+    //         }).finally(() => {
+    //             form.reset();
+    //         });
+    // }
 
-    function showThanksModal(message) {
-        alert(message);
-    }
+    // function showThanksModal(message) {
+    //     alert(message);
+    // }
+
+    // $('#form').validate({
+    //     rules: {
+    //         name: {
+    //             required: true
+    //         },
+    //         email: {
+    //             required: true,
+    //             email: true
+    //         },
+    //         subject: {
+    //             required: true,
+    //             minlength: 7
+    //         },
+    //         message: {
+    //             required: true,
+    //             minlength: 15
+    //         }
+    //     },
+    //     messages: {
+    //         name: {
+    //             required: "Пожалуйста, заполните поле \"Name\""
+    //         },
+    //         email: {
+    //             required: "Пожалуйста, заполните поле \"Email\"",
+    //             email: "Пожалуйста, введите корректный email адрес"
+    //         },
+    //         subject: {
+    //             required: "Пожалуйста, заполните поле \"Subject\"",
+    //             minlength: jQuery.format('Длина темы должно быть не менее {0}-х символов')
+    //         },
+    //         message: {
+    //             required: "Пожалуйста, заполните поле \"Message\"",
+    //             minlength: jQuery.format('Длина сообщения должно быть не менее {0}-х символов')
+    //         }
+    //     },
+    //     submitHandler: function() {
+    //         bindPostData(form);
+    //     }
+    // });
 
 });

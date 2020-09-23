@@ -1,7 +1,10 @@
 .portfolio {
     position: relative;
     padding: 50px 0 100px 0;
-    background: linear-gradient($black, $green);
+    background: $green;
+    // background: url('../img/bg-4.jpg') no-repeat;
+    // background-size: 100% 100%;
+    // background-position: center;
     &__wrapper {
         width:100%;
         margin-top:15px;
@@ -50,14 +53,14 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: 150px;
+        left: 200px;
         border: none;
         background-color: rgba(0,0,0, 0);
-        color: $black;
-        font-size: 66px;
+        color: #fff;
+        font-size: 50px;
     }
     &__next {
-        right: 150px;
+        right: 200px;
         left: auto;
     }
 }

@@ -53,13 +53,13 @@
         <div class="container">
             <h3 class="title">ABOUT ME</h3>
             <div class="row">
-                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 mt-4">
+                <div class="col-xl-3 col-lg-4 col-md-4 mt-4">
                      <div class="about__avatar">
                          <img src="img/avatar.jpg" alt="Avatar">
                      </div>
                 </div>
     
-                <div class="col-xl-9 col-lg-8 col-md-8 col-sm-8 mt-4">
+                <div class="col-xl-9 col-lg-8 col-md-8 mt-4">
                     <div class="about__descr">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias beatae possimus asperiores cumque corrupti, commodi eum veniam, consectetur non dicta similique nobis eveniet nihil neque totam sunt cupiditate ullam impedit maiores molestiae eius? Est quos, et quisquam, sequi esse expedita non quas iste laboriosam exercitationem pariatur doloremque dignissimos explicabo dolorem vero, necessitatibus nobis enim nam reprehenderit! Ex deserunt debitis veniam molestiae sunt, quidem eaque ab voluptatum quis beatae consectetur at doloremque veritatis obcaecati.
@@ -122,12 +122,11 @@
                  </div>
             </div>
             <button class="about__button">VIEW MY RESUME</button>
-            <hr>
         </div> 
     </main>
-
+    <hr>
     <section class="whatIdo" id="whatIdo">
-        <h3 class="title title_black">WHAT I DO?</h3>
+        <h3 class="title">WHAT I DO?</h3>
         <div class="container">
             <div class="row mt-5">
                 <div class="col-12 col-md-4 mt-5">
@@ -159,7 +158,7 @@
     </section>
 
     <section class="portfolio" id="portfolio">
-        <h3 class="title">PORTFOLIO</h3>
+        <h3 class="title title_black">PORTFOLIO</h3>
         <button class="portfolio__prev"><i class="fas fa-angle-left"></i></button>
         <button class="portfolio__next"><i class="fas fa-angle-right"></i></button>
         <div class="container">
@@ -197,16 +196,16 @@
                 </div>
                 <form class="contacts__right" id="form">
                     <h2>Contact Me</h2>
-                    <input required type="text" name="name" class="contacts__field" placeholder="Your Name">
-                    <input required type="email" name="email" class="contacts__field" placeholder="Your Email">
-                    <input required type="text" name="subject" class="contacts__field" placeholder="Subject">
-                    <textarea required name="message" class="contacts__field contacts__area" placeholder="Message"></textarea>
+                    <input type="text" name="name" class="contacts__field" placeholder="Your Name">
+                    <input type="email" name="email" class="contacts__field" placeholder="Your Email">
+                    <input type="text" name="subject" class="contacts__field" placeholder="Subject">
+                    <textarea name="message" class="contacts__field contacts__area" placeholder="Message"></textarea>
                     <button type="submit" class="contacts__button">Send</button>
                 </form>
             </div>
         </div>
     </section>
-
+    <hr>
     <section class="socialMedia">
         <div class="container">
             <h3 class="title">FOLLOW ME!</h3>
@@ -219,7 +218,7 @@
             </div>
         </div>
     </section>
-    
+    <hr>
     <footer class="footer">
         <h3 class="footer__title">THANKS FOR VISIT!</h3>
         <br>
@@ -231,7 +230,9 @@
             <div class="resume__content">
                 <div class="container">
                     <div class="resume__header">
-                        <button type="button" class="close__button"><span aria-hidden="true">&times;</span></button>
+                        <div class="resume__close-wrapper">
+                            <button type="button" class="close__button"><span aria-hidden="true">&times;</span></button>
+                        </div>
                         <h2>Resume</h2>
                     </div>
                     <br>
