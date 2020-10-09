@@ -40,7 +40,6 @@
     .portfolio {
         position: relative;
         padding: 50px 0 100px 0;
-        background: $green;
         // background: url('../img/bg-4.jpg') no-repeat;
         // background-size: 100% 100%;
         // background-position: center;
@@ -53,7 +52,7 @@
             justify-content: space-around;
             width: 100%;
             height: 390px;
-            margin-top: 30px;
+            margin-top: 20px;
         }
         &__img {
             width: 50%;
@@ -62,17 +61,10 @@
             width: 40%;
         }
         &__prev,&__next {
-            position: absolute;
-            top: 90%;
-            left: 200px;
-            border: none;
-            background-color: rgba(0,0,0, 0);
-            color: #fff;
-            font-size: 50px;
+            display: none;
         }
         &__next {
-            right: 200px;
-            left: auto;
+            display: none;
         }
     }
 }
@@ -86,10 +78,10 @@
         &__item {
             display: flex;
             justify-content: space-around;
-            align-items: center;
+            align-items: flex-start;
             width: 100%;
             height: 390px;
-            margin-top: 30px;
+            margin-top: 10px;
         }
         &__img {
             width: 45%;
@@ -105,8 +97,6 @@
                     font-size: 14px;
                 }
                 p {
-                    font-size: 8px;
-                    font-weight: 900;
                     color: grey;
                 }
                 a {
@@ -114,19 +104,6 @@
                     font-size: 10px;
                 }
             }
-        }
-        &__prev,&__next {
-            position: absolute;
-            top: 90%;
-            left: 200px;
-            border: none;
-            background-color: rgba(0,0,0, 0);
-            color: #fff;
-            font-size: 50px;
-        }
-        &__next {
-            right: 200px;
-            left: auto;
         }
     }
 }
@@ -145,7 +122,7 @@
             align-items: flex-start;
             width: 100%;
             max-height: 350px;
-            margin-top: 30px;
+            margin-top: 10px;
         }
         &__img {
             width: 50%;
@@ -162,8 +139,6 @@
                     font-size: 12px;
                 }
                 p {
-                    font-size: 8px;
-                    font-weight: 900;
                     color: grey;
                 }
                 a {
@@ -172,22 +147,84 @@
                 }
             }
         }
-        &__prev,&__next {
-            position: absolute;
-            top: 85%;
-            left: 100px;
-            border: none;
-            background-color: rgba(0,0,0, 0);
-            color: #fff;
-            font-size: 30px;
-        }
-        &__next {
-            right: 100px;
-            left: auto;
-        }
     }
 }
 
 @media screen and (max-width: 576px) {
-    
+    .portfolio {
+        position: relative;
+        padding: 50px 0 20px 0;
+        &__wrapper {
+            width:100%;
+            margin-top:15px;
+        }
+        &__item {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            width: 100%;
+            max-height: 350px;
+            margin-top: 0px;
+        }
+        &__img {
+            width: 60%;
+            height: 250px;
+        }
+        &__info {
+            display: flex;
+            align-items: flex-start;
+            width: 35%;
+            .info {
+                width: 100%;
+                max-height: 300px;
+                padding: 10px;
+                h5 {
+                    font-size: 11px;
+                }
+                p {
+                    color: grey;
+                }
+                a {
+                    width: 80px;
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .portfolio {
+        position: relative;
+        padding: 50px 0 20px 0;
+        &__img {
+            width: 60%;
+            height: 200px;
+        }
+        &__info {
+            display: flex;
+            align-items: flex-start;
+            width: 35%;
+            .info {
+                width: 100%;
+                min-height: 100px;
+                padding: 10px;
+                h5 {
+                    font-size: 8px;
+                }
+                p {
+                    font-size: 5px;
+                    color: grey;
+                    margin-top: 0px;
+                    margin-bottom: 0;
+                }
+                a {
+                    width: 50px;
+                    font-size: 6px;
+                    padding: 3px 6px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
 }

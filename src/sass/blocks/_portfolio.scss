@@ -1,7 +1,7 @@
 .portfolio {
     position: relative;
     padding: 50px 0 100px 0;
-    background: $green;
+    background: rgb(13, 79, 141);
     // background: url('../img/bg-4.jpg') no-repeat;
     // background-size: 100% 100%;
     // background-position: center;
@@ -28,10 +28,14 @@
         .info {
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            h5 {
+                @include responsiveFont(20, 11);
+            }
             p {
-                font-size: 14px;
+                @include responsiveFont(12, 7);
                 text-align: center;
                 margin-top: 5px;
+                margin-bottom: 10px;
             }
             a {
                 width: 130px;

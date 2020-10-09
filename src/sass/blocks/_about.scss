@@ -12,7 +12,7 @@
     }
     &__descr {
         p {
-            font-size: 18px;
+            @include responsiveFont(18, 12);
             font-weight: 300;
             color: #808080;
         }

@@ -89,6 +89,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // $('.about__button').on('click', function(e) {
+    //     $('.resume').fadeIn('slow');
+    // });
+
     // Использую классы для создания блока проектов
 
     class ProjectItem {
