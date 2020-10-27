@@ -20,6 +20,17 @@
                 }
             }
         }
+        &__right {
+            padding: 25px 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 411px) {
+    .contacts {
+        &__policy {
+            font-size: 10px;
+        }
     }
 }
 

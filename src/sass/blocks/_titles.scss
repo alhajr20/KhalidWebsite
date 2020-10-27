@@ -1,10 +1,14 @@
 .title {
     text-align: center;
     color: $green;
+    @include responsiveFont(28, 16);
     &_black {
         color: $black;
     }
     &__white {
         color: #fff;
+    }
+    &__mini {
+        @include responsiveFont(24, 14);
     }
 }

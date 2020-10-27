@@ -1,6 +1,6 @@
 "use strict";
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
 
     // mobile menu
 
@@ -89,10 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // $('.about__button').on('click', function(e) {
-    //     $('.resume').fadeIn('slow');
-    // });
-
     // Использую классы для создания блока проектов
 
     class ProjectItem {
@@ -131,77 +127,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // const url = 'http://localhost:3000/items';
-
-    // function getResource(method, url, body = null) {
-    //     return fetch(url, {
-    //         method: method
-    //     })
-    //         .then(response => {
-    //             if (response.ok) {
-    //                 return response.json();
-    //             }
-
-    //             return response.json().then(error => {
-    //                 const e = new Error(`Could not fetch ${url}, status: ${response.status}`);
-    //                 e.data = error;
-    //                 throw e;
-    //             });
-    //         });
-    // }
-
-    // getResource('GET', url)
-    //     .then(data => {
-    //         data.forEach(({src, altImg, title, descr}) => {
-    //             new ProjectItem(src, altImg, title, descr, ".portfolio__inner").render();
-    //         });
-    //     });
-
-    // const getResource = (url) => {
-    //     let res = fetch(url);
-    
-    //     if (!res.ok) {
-    //         throw new Error(`Could not fetch ${url}, status: ${res.status}`);
-    //     }
-    
-    //     return res.json();
-    // };
-
-    // getResource('http://localhost:3000/items')
-    //     .then(data => {
-    //         data.forEach(({src, altImg, title, descr}) => {
-    //             new ProjectItem(src, altImg, title, descr, ".portfolio__inner").render();
-    //         });
-    //     });
-
     new ProjectItem(
-        'img/tribute-teaser.png',
-        'twenty one pilots',
-        'TWENTY ONE PILOTS',
+        'img/portfolio/uber.png',
+        'uber',
+        'Uber',
         'Descr Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam magni adipisci quibusdam ut neque suscipit quos nemo provident ipsa? Odit ducimus voluptatem placeat, quis reiciendis iusto quo dolore. Vitae, corporis.',
         '.portfolio__inner'
     ).render();
 
     new ProjectItem(
-        'img/tribute-teaser.png',
-        'twenty one pilots',
-        'TWENTY ONE PILOTS',
+        'img/portfolio/uber.png',
+        'uber',
+        'Uber',
         'Descr Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam magni adipisci quibusdam ut neque suscipit quos nemo provident ipsa? Odit ducimus voluptatem placeat, quis reiciendis iusto quo dolore. Vitae, corporis.',
         '.portfolio__inner'
     ).render();
 
     new ProjectItem(
-        'img/tribute-teaser.png',
-        'twenty one pilots',
-        'TWENTY ONE PILOTS',
+        'img/portfolio/uber.png',
+        'uber',
+        'Uber',
         'Descr Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam magni adipisci quibusdam ut neque suscipit quos nemo provident ipsa? Odit ducimus voluptatem placeat, quis reiciendis iusto quo dolore. Vitae, corporis.',
         '.portfolio__inner'
     ).render();
 
     new ProjectItem(
-        'img/tribute-teaser.png',
-        'twenty one pilots',
-        'TWENTY ONE PILOTS',
+        'img/portfolio/uber.png',
+        'uber',
+        'Uber',
         'Descr Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam magni adipisci quibusdam ut neque suscipit quos nemo provident ipsa? Odit ducimus voluptatem placeat, quis reiciendis iusto quo dolore. Vitae, corporis.',
         '.portfolio__inner'
     ).render();
@@ -261,11 +214,11 @@ document.addEventListener('DOMContentLoaded', () => {
             margin-right: 3px;
             margin-left: 3px;
             cursor: pointer;
-            background-color: #fff;
+            background-color: #4a998a;
             background-clip: padding-box;
             border-top: 10px solid transparent;
             border-bottom: 10px solid transparent;
-            opacity: .5;
+            opacity: .2;
             transition: opacity .6s ease;
         `;
         if (i == 0) {
@@ -329,83 +282,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Form
 
-    // const form = document.querySelector('form');
+    const form = document.querySelector('form'),
+          name = form.elements[0],
+          email = form.elements[1],
+          subject = form.elements[2],
+          message = form.elements[3];
 
-    // const message = {
-    //     loading: 'Загрузка...',
-    //     success: 'Спасибо! Ждите ответа',
-    //     failure: 'Что-то пошло не так...'
-    // };
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
 
-    // const postData = async (url, data) => {
-    //     let res = await fetch(url, {
-    //         method: "POST",
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: data
-    //     });
-    
-    //     return await res.json();
-    // };
+        if (document.querySelector('.validate')) {
+            document.querySelector('.validate').remove();
+        }
 
-    // function bindPostData(form) {
-    //     const formData = new FormData(form);
+        if (name.value && email.value && subject.value && message.value) {
+            const checkName = /^[A-Za-z]{3,16}$/;
+            const checkEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            if (checkName.test(name.value) && checkEmail.test(email.value)) {
 
-    //     const json = JSON.stringify(Object.fromEntries(formData.entries()));
+                let success = document.createElement('div');
+                success.classList.add('validate');
+                success.innerHTML = `<span style="color: green;">Сообщение успешно отправлено</span>`;
 
-    //     postData('http://localhost:3000/requests', json)
-    //         .then(data => {
-    //             showThanksModal(message.success);
-    //         }).catch(() => {
-    //             showThanksModal(message.failure);
-    //         }).finally(() => {
-    //             form.reset();
-    //         });
-    // }
+                form.append(success);
+            } else {
 
-    // function showThanksModal(message) {
-    //     alert(message);
-    // }
+                let error = document.createElement('div');
+                error.classList.add('validate');
+                error.innerHTML = `<span style="color: red;">Не корректно заполнены поля</span>`;
 
-    // $('#form').validate({
-    //     rules: {
-    //         name: {
-    //             required: true
-    //         },
-    //         email: {
-    //             required: true,
-    //             email: true
-    //         },
-    //         subject: {
-    //             required: true,
-    //             minlength: 7
-    //         },
-    //         message: {
-    //             required: true,
-    //             minlength: 15
-    //         }
-    //     },
-    //     messages: {
-    //         name: {
-    //             required: "Пожалуйста, заполните поле \"Name\""
-    //         },
-    //         email: {
-    //             required: "Пожалуйста, заполните поле \"Email\"",
-    //             email: "Пожалуйста, введите корректный email адрес"
-    //         },
-    //         subject: {
-    //             required: "Пожалуйста, заполните поле \"Subject\"",
-    //             minlength: jQuery.format('Длина темы должно быть не менее {0}-х символов')
-    //         },
-    //         message: {
-    //             required: "Пожалуйста, заполните поле \"Message\"",
-    //             minlength: jQuery.format('Длина сообщения должно быть не менее {0}-х символов')
-    //         }
-    //     },
-    //     submitHandler: function() {
-    //         bindPostData(form);
-    //     }
-    // });
+                form.append(error);
+            }
+        } else {
+            let error = document.createElement('div');
+            error.classList.add('validate');
+            error.innerHTML = `<span style="color: red;">Не все поля заполнены</span>`;
 
+            form.append(error);
+        }
+        form.reset();
+    });
+
+    const anchor = document.querySelectorAll('a[href^="#"]');
+
+    anchor.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const linkId = link.getAttribute('href');
+            document.querySelector(linkId).scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        });
+    });
 });

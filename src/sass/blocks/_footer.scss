@@ -1,14 +1,32 @@
 .footer {
-    // background: url('../img/bg-7.jpg') fixed no-repeat;
-    // background-position: center;
-    // background-size: cover;
-    padding: 100px 0 100px 0;
+    background: url('../img/footer/bg.jpg') fixed no-repeat center/cover;
+    padding: 70px 0 70px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     &__title {
-        color: $green;
+        color: #fff;
         font-weight: 900;
+        @include responsiveFont(28, 16);
+    }
+    span {
+        @include responsiveFont(16, 12);
+        color: #fff;
+    }
+    .address {
+        margin-bottom: 20px;
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            li {
+                color: #fff;
+                font-weight: 900;
+            }
+            li:nth-child(2) {
+                padding: 0 50px;
+            }
+        }
     }
 }

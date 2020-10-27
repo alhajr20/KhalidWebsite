@@ -48,7 +48,7 @@
         display: none;
     }
     &__info {
-        background: url('../img/bg-5.jpg') fixed no-repeat;
+        background: url('../img/header/bg.jpg') fixed no-repeat;
         background-size: 100% 100%;
         background-position: center;
         padding: 200px 0 0 0;
@@ -71,11 +71,11 @@
             border: 1px solid #ffffff;
             transition: 0.5s all;
             margin-top: 50px;
-            font-weight: 700;
+            font-weight: 300;
             &:hover {
-                background-color: #ffffff;
-                color: $green;
-                border: 3px solid #ffffff;
+                background-color: $green;
+                color: #ffffff;
+                border: 1px solid $green;
             }
         }
     }

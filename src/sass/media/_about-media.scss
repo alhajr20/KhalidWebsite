@@ -12,9 +12,14 @@
 
 @media screen and (max-width: 576px) {
     .about {
+        &__avatar {
+            width: 60%;
+            margin: 0 auto;
+        }
         .skills__tabs {
             .skills__tab {
                 padding: 5px 15px;
+                font-size: 14px;
             }
         }
         .skills__wrapper {
@@ -33,5 +38,26 @@
                 }
             }
         }        
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .about {
+        .skills__tabs {
+            .skills__tab {
+                padding: 3px 10px;
+                font-size: 12px;
+            }
+        }
+        .skills__wrapper {
+            .skills__block {
+                h5 {
+                    font-size: 12px;
+                }
+                i {
+                    font-size: 35px;
+                }
+            }
+        }     
     }
 }
